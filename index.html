@@ -76,6 +76,17 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-80873609-1', 'auto');
       ga('send', 'pageview');
-  </script>
+    </script>
+    <!-- Autoplay Video -->
+    <script>
+      var intro = document.querySelector('.fullscreen-bg');
+      var introPlayer = document.querySelector('.fullscreen-bg__video');
+
+      var iOS = /iPad|iPhone|iPod/.test(navigator.platform);
+      if (iOS) {
+        intro.style.backgroundImage = 'url("' + introPlayer.poster + '")';
+        introPlayer.style.display = 'none';
+      }
+    </script>
   </body>
 </html>
