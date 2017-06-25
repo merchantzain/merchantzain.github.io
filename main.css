@@ -61,11 +61,7 @@ a:hover {
     -moz-backdrop-filter: blur(1.5px);
     -ms-backdrop-filter: blur(1.5px);
     -o-backdrop-filter: blur(1.5px);
-    backdrop-filter: blur(1.5px);
 	margin-top: 5%;
-	margin-bottom: 0%;
-	margin-right: 0%;
-	margin-left: 0%;
 }
 
 /* links in navbar (button grammmar in case you want to go back to old design) */
@@ -137,6 +133,6 @@ a:hover {
   .fullscreen-bg__video {
   }
 
-video::-webkit-media-controls {
+video::-webkit-media-controls-start-playback-button {
     display: none !important;
 }
