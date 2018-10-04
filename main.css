@@ -1,141 +1,154 @@
-/* general formatting */
-html, 
-body {
-    width: 100%;
-    height: 100%;
+/* include custom font */
+@font-face {
+  font-family: 'Carrois Gothic';
+  src: url(fonts/CarroisGothic-Regular.ttf);
+
 }
 
-body {
-   	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    /*background-image: url('media/city_lights_namerica_8k.jpg');*/
+/* layout settings */
+html, body, .container-fluid, .row {
+    font-family: 'Carrois Gothic', sans-serif;
+    background-color: white;
+    height: 100%;
+    width: 100%
+}
+
+/* column one */
+.left{
+    display: flex;
     background-color: black;
-    background-size:     cover;                      
-    background-repeat:   no-repeat;
-    background-position: center center;
-    position: fixed;
-}
-
-h2 {
-    margin-right: 10%;
-    margin-left: 10%;
-    line-height: 150%;
-    font-size: 24px;
-}
-
-a {
-	color: #428BCA;
-}
-
-a:hover {
-	color: #3F729B;
-}
-
-/* bootstrap centered paragraph text */
-.header {
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    color: white;
-}
-
-.text-vertical-center {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    position: relative;
-}
-
-.text-vertical-center h1 {
-    margin: 0;
+    min-height: 100vh;
+    align-items: center;
     padding: 0;
-    font-size: 8vh;
-    font-weight: 700;
+}
+@media (max-width: 767px) {
+    .col-sm-7 {
+        min-height: 30vh;
+        height: 30vh;
+    }
+}
+@media (max-width: 767px) {
+    .col-md-7 {
+        min-height: 30vh;
+        height: 30vh;
+    }
+}
+@media (max-width: 767px) {
+    .col-lg-7 {
+        min-height: 30vh;
+        height: 30vh;
+    }
 }
 
-/* frosted black navbar */
-.container.nav {
-	background-color: rgba(5, 5, 5, 0.5);
-	backdrop-filter: blur(1.5px);  
-    -webkit-backdrop-filter: blur(1.5px);
-    -moz-backdrop-filter: blur(1.5px);
-    -ms-backdrop-filter: blur(1.5px);
-    -o-backdrop-filter: blur(1.5px);
-	margin-top: 5%;
-}
-
-/* links in navbar (button grammmar in case you want to go back to old design) */
-.btn {
-    margin-right: 5%;
-    margin-left: 5%;
-    background-color: transparent;
+.homelink {
+    font-size: 7vmax;
+    padding: 0;
+    background-color: black;
+    color: white;
+    border-radius: 0;
     display: inline-block;
     cursor: pointer;
-    font-size: 2.25vh;
-    font-weight: bold;
-    padding: 1% 2%;
-    color: #428BCA;
+    -moz-transition: all .20s ease-in;
+    -o-transition: all .20s ease-in;
+    -webkit-transition: all .20s ease-in;
+    transition: all .20s ease-in;
+}
+.homelink:hover {
+    font-size: 7vmax;
+    padding: 0;
+    background-color: white;
+    color: black;
+    border-radius: 0;
+    display: inline-block;
+    cursor: pointer;
+    -moz-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    -webkit-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+}
+
+.nav_dashes {
+    font-size: 1.25vmax;
+    color: white;
+    font-weight: bolder;
+}
+
+.btn {
+    font-size: 2.55vmax;
+    margin: 1vw;
+    padding: 0;
+    background-color: transparent;
+    color: deepskyblue; /*488AC7*/
+    border-radius: 0;
+    display: inline-block;
+    cursor: pointer;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    -webkit-transition: all .15s ease-in;
+    transition: all .15s ease-in;
 }
 
 .btn:hover {
-    margin-right: 5%;
-    margin-left: 5%;
+    font-size: 2.55vmax;
+    margin: 1vw;
+    padding: 0;
+    background-color: white;
+    color: black;
+    border-radius: 0;
     display: inline-block;
     cursor: pointer;
-    font-size: 2.25vh;
-    font-weight: bold;
-    padding: 1% 2%;
-    color: #3F729B;
-    text-decoration: underline;
+    -moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    -webkit-transition: all .15s ease-in;
+    transition: all .15s ease-in;
 }
 
-/* background video loop */
-.fullscreen-bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -100;
-  background-size:     cover;                      
-  background-repeat:   no-repeat;
-  background-position: center center;
+/* column two */
+.right{
+    display: block;
+    background-color: white;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: hidden;
+    overflow-y: scroll;
 }
-
-.fullscreen-bg__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-@media (min-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-    height: 300%;
-    top: -100%;
-  }
-}
-
-@media (max-aspect-ratio: 16/9) {
-  .fullscreen-bg__video {
-    width: 300%;
-    left: -100%;
-  }
-}
-
 @media (max-width: 767px) {
-  .fullscreen-bg {
-    background: url('media/city_lights_namerica_8k.jpg') center center / cover no-repeat;
-  }
+    .col-sm-5 {
+        min-height: 70vh;
+        height: 70vh;
+    } 
+}
+@media (max-width: 767px) {
+    .col-md-5 {
+        min-height: 70vh;
+        height: 70vh;
+    } 
+}
+@media (max-width: 767px) {
+    .col-lg-5 {
+        min-height: 70vh;
+        height: 70vh;
+    } 
+}
 
-  .fullscreen-bg__video {
-  }
+.slideshow {
+    height: 75%; 
+    width: 75%; 
+    opacity:1;
+    transition: opacity 1s;
+}
 
-video::-webkit-media-controls-start-playback-button {
-    display: none !important;
-    -webkit-appearance: none;
-    pointer-events: none;
+.default {
+    height: 89vh;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw;
+}
+
+/* both columns */
+.center {
+    margin: 0 auto;
 }
