@@ -31,7 +31,7 @@
     <![endif]-->
   </head>
 
-  <body onload="slideshowFunction()">
+  <body onload="slideshowFunction(false)">
     <row>
       <div class="col-7 col-sm-7 col-md-7 col-lg-7 left text-center">
         <div class="center">
@@ -52,8 +52,8 @@
         <div class="default">
           <div id="default" style="display: block; position: relative; padding-top: 15vh;">
             <div class="text-center">
-              <img src="media/ucsd-e4e.jpg" id="slideshow" class="slideshow" alt="image slideshow goes here : /"></br></br>
-              <p id="slideshow_captions">This summer I was part of UC San Diego's Engineering for Exploration REU. Our project was to build a working hexacopter with all control and command algorithms running on a Xilinx ZYNQ ARM + FPGA board.</p></br></br>
+              <img src="media/ucsd-e4e.jpg" id="slideshow" class="slideshow" alt="image slideshow goes here : /" onclick="slideshowFunction(true)"></br></br>
+              <p id="slideshow_captions">This summer I was part of UC San Diego's Engineering for Exploration REU. Our project was to build a working hexacopter with all control and command algorithms running on a Xilinx ZYNQ ARM + FPGA board. Learn more about what I did <a href=\"https://ieeexplore.ieee.org/document/8622102\" target=\"_blank\">here</a>.</p></br></br>
             </div>
           </div>
 
