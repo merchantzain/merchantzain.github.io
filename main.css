@@ -1,154 +1,96 @@
-/* include custom font */
+/* Include custom font */
 @font-face {
-  font-family: 'Carrois Gothic';
-  src: url(fonts/CarroisGothic-Regular.ttf);
-
+    font-family: 'Rasa Regular';
+    src: url(./fonts/Rasa-Regular.ttf);  
 }
 
-/* layout settings */
-html, body, .container-fluid, .row {
-    font-family: 'Carrois Gothic', sans-serif;
-    background-color: white;
-    height: 100%;
-    width: 100%
+@font-face {
+    font-family: 'Rasa SemiBold';
+    src: url(./fonts/Rasa-SemiBold.ttf);  
+}
+  
+/* Basic design of html elements */
+html {
+    width: 100vw;
+    height: 100vh;
 }
 
-/* column one */
-.left{
+body {
+    font-family: 'Rasa Regular';
+    font-style: normal;
+    font-weight: normal;
+    line-height: auto;
     display: flex;
-    background-color: black;
-    min-height: 100vh;
-    align-items: center;
-    padding: 0;
-}
-@media (max-width: 767px) {
-    .col-sm-7 {
-        min-height: 30vh;
-        height: 30vh;
-    }
-}
-@media (max-width: 767px) {
-    .col-md-7 {
-        min-height: 30vh;
-        height: 30vh;
-    }
-}
-@media (max-width: 767px) {
-    .col-lg-7 {
-        min-height: 30vh;
-        height: 30vh;
-    }
+    align-items: flex-end;
+
+    background-color: #0D324D;
+    color: #FFFFFF;
+
+    padding-top: 12.5%;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 
-.homelink {
-    font-size: 7vmax;
-    padding: 0;
-    background-color: black;
-    color: white;
-    border-radius: 0;
-    display: inline-block;
-    cursor: pointer;
-    -moz-transition: all .20s ease-in;
-    -o-transition: all .20s ease-in;
-    -webkit-transition: all .20s ease-in;
-    transition: all .20s ease-in;
-}
-.homelink:hover {
-    font-size: 7vmax;
-    padding: 0;
-    background-color: white;
-    color: black;
-    border-radius: 0;
-    display: inline-block;
-    cursor: pointer;
-    -moz-transition: all .25s ease-in;
-    -o-transition: all .25s ease-in;
-    -webkit-transition: all .25s ease-in;
-    transition: all .25s ease-in;
+b {
+    font-family: 'Rasa SemiBold';
+    color: #FFFFFF;
 }
 
-.nav_dashes {
-    font-size: 1.25vmax;
-    color: white;
-    font-weight: bolder;
+u {
+    color: #FFFFFF;
+    text-decoration:none;
+
+    -webkit-transition: all .175s ease-in-out;
+    transition: all .175s ease-in-out;
+
+    -webkit-box-shadow:inset 0 -2px 0 #ffffff;
+    box-shadow:inset 0 -2px 0 #ffffff
 }
 
-.btn {
-    font-size: 2.55vmax;
-    margin: 1vw;
-    padding: 0;
-    background-color: transparent;
-    color: deepskyblue; /*488AC7*/
-    border-radius: 0;
-    display: inline-block;
-    cursor: pointer;
-    -moz-transition: all .15s ease-in;
-    -o-transition: all .15s ease-in;
-    -webkit-transition: all .15s ease-in;
-    transition: all .15s ease-in;
+u:hover {
+    color: #0D324D;
+
+    -webkit-box-shadow:inset 0 -32px 0 0 #ffffff;
+    box-shadow:inset 0 -32px 0 0 #ffffff;
 }
 
-.btn:hover {
-    font-size: 2.55vmax;
-    margin: 1vw;
-    padding: 0;
-    background-color: white;
-    color: black;
-    border-radius: 0;
-    display: inline-block;
-    cursor: pointer;
-    -moz-transition: all .15s ease-in;
-    -o-transition: all .15s ease-in;
-    -webkit-transition: all .15s ease-in;
-    transition: all .15s ease-in;
+.transition_after_load {
+    -webkit-transition: none !important;
+    transition: none !important;
 }
 
-/* column two */
-.right{
-    display: block;
-    background-color: white;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    white-space: normal;
-    word-wrap: break-word;
-    overflow: hidden;
-    overflow-y: scroll;
-}
-@media (max-width: 767px) {
-    .col-sm-5 {
-        min-height: 70vh;
-        height: 70vh;
-    } 
-}
-@media (max-width: 767px) {
-    .col-md-5 {
-        min-height: 70vh;
-        height: 70vh;
-    } 
-}
-@media (max-width: 767px) {
-    .col-lg-5 {
-        min-height: 70vh;
-        height: 70vh;
-    } 
+.greeting {
+    color: #FFFFFF;
+    font-size: calc(48px + 1vmin);
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
-.slideshow {
-    height: 75%; 
-    width: 75%; 
-    opacity:1;
-    transition: opacity 1s;
+.about {
+    color: #E2E2E2;
+    font-size: calc(24px + .5vmin);
+    overflow: auto;
 }
 
-.default {
-    height: 89vh;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw;
+.navbar {
+    text-align: center;
+    white-space: nowrap;
+    margin-top: 20%;
+    display: None;
+    overflow: auto;
 }
 
-/* both columns */
-.center {
-    margin: 0 auto;
+.navbar-item {
+    margin-right: calc(10px + 2vmin);
+    padding-bottom: 10px;
+    border-bottom: 5px solid #ffffff00;
+}
+
+.navbar-item:hover,
+.navbar-item:focus {
+    border-bottom: 5px solid #ffffff;
+}
+
+.navbar-last-item {
+    margin-right: 0;
 }
